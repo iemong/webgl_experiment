@@ -1,5 +1,3 @@
-import Sample from './lib/Sample';
-import $ from 'jquery';
 
 const ratio = window.devicePixelRatio || 1
 
@@ -11,7 +9,7 @@ renderer.setPixelRatio(ratio)
 
 const content = document.querySelector('.content')
 const canvas = renderer.domElement
-wrapper.appendChild(canvas)
+content.appendChild(canvas)
 
 // 2 sceneを作る
 const scene = new THREE.Scene()
@@ -39,7 +37,7 @@ scene.add(ambientLight)
 const boxGeometry = new THREE.BoxGeometry(80, 80, 80)
 const boxMaterial = new THREE.MeshPhongMaterial({
     color: 0xffffff
-}) 
+})
 const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial)
 boxMesh.position.set(0, 0, 0)
 boxMesh.rotation.y = -20 * Math.PI / 180
@@ -50,8 +48,8 @@ window.addEventListener('resize', onWindowResize)
 requestAnimationFrame(tick)
 
 function onWindowResize() {
-    const width = wrapper.offsetWidth
-    const height = wrapper.offsetHeight
+    const width = content.offsetWidth
+    const height = content.offsetHeight
     
     camera.aspect = width / height
     camera.updateProjectionMatrix()

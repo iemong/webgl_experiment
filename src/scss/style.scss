@@ -12,7 +12,7 @@
   margin: 0;
 }
 
-.wrapper {
+.content {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -22,7 +22,5 @@ canvas {
   display: block;
   position: absolute;
   top: 0;
-  lefk: 0;
-  width: 100%;
-  height: 100%;
+  left: 0;
 }
