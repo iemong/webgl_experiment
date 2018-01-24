@@ -1,1 +1,1 @@
-import Webgl from './lib/practice_04';
+import Practice_04  from './lib/practice_05';

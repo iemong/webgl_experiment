@@ -1,4 +1,4 @@
-class Webgl {
+class Practice_04 {
     constructor() {
         this.renderer = null;
         this.scene = null;
@@ -135,4 +135,4 @@ class Webgl {
     }
 }
 
-export default new Webgl
+export default new Practice_04
